@@ -17,4 +17,8 @@ export default function routes(app, addon) {
     });
 
     // Add additional route handlers here...
+
+    app.get('/activity', addon.authenticate(), (req, res) => {
+		res.render('activity', { title: "Jira activity" });
+	});
 }

@@ -16,9 +16,11 @@
     "express": "^4.16.4",
     "express-hbs": "^2.1.2",
     "morgan": "^1.9.1",
-    "sequelize": "^5.8.6"
+    "sequelize": "^5.8.6",
+    "sqlite3": "^4.0.8"
   },
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^5.16.0",
+    "ngrok": "^2.3.0"
   }
 }
