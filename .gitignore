@@ -1,6 +1,7 @@
-*.iml
-*.idea
-.DS_Store
+# *.iml
+# *.idea
+# .DS_Store
+ node_modules
+# *.pem
+# credentials.json
 node_modules
-*.pem
-credentials.json

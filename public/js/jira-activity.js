@@ -19,3 +19,8 @@ AP.request('/rest/api/3/project/search', {
 		projectTable.deleteRow(1);
 	}
 });
+AP.request('/rest/api/3/project/search', {
+    success: function(responseText){
+var data = JSON.parse(re)
+    }
+});
