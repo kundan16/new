@@ -10,6 +10,7 @@ import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import errorHandler from 'errorhandler';
 import morgan from 'morgan';
+// import api from './public/js/apicall'
 
 // atlassian-connect-express also provides a middleware
 import ace from 'atlassian-connect-express';

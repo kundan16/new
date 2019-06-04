@@ -1,3 +1,5 @@
+import Axios from "axios";
+
 export default function routes(app, addon) {
     // Redirect root path to /atlassian-connect.json,
     // which will be served by atlassian-connect-express.
@@ -18,7 +20,28 @@ export default function routes(app, addon) {
 
     // Add additional route handlers here...
 
+    app.get('/contact', addon.authenticate(), (req, res) => {
+		res.render('activity', { title: "Jira 1 activity" });
+    });
     app.get('/activity', addon.authenticate(), (req, res) => {
-		res.render('activity', { title: "Jira activity" });
-	});
+        res.render('contact', { title: "contact list"});
+        console.log("jjjjjjj\n\n");
+        Axios.get('http://localhost:8080/contacts')
+        .then(response => {
+            var list = document.getElementById("detail");
+            var node = document.createElement("p");
+           var n = response.name.length;
+           console.log(n);
+          
+            for(let i = 0; i < n; i++)
+            {
+                console.log("hhh\n");
+                list.appendChild(node.appendChild(document.createTextNode(response.name[i])));
+            }
+        })
+        .catch(error => {
+            res.send(error)
+        })
+
+    });
 }

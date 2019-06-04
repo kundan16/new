@@ -49,6 +49,7 @@
             "dialect": "sqlite3",
             "type": "memory"
         }
+       
     },
     // Configuration for production, which is enabled by setting
     // the NODE_ENV=production environment variable.

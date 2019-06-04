@@ -5,7 +5,7 @@ AP.request('/rest/api/3/project/search', {
 
 		for (var x = 0; x < data.values.length; x++) {
 		var value = data.values[x];
-		console.log(value);
+		//console.log(value);
 		var newRow = projectTable.insertRow(-1);
 		var newCellLogo = newRow.insertCell(0)
 		var newCellKey = newRow.insertCell(1);
@@ -18,9 +18,4 @@ AP.request('/rest/api/3/project/search', {
 
 		projectTable.deleteRow(1);
 	}
-});
-AP.request('/rest/api/3/project/search', {
-    success: function(responseText){
-var data = JSON.parse(re)
-    }
 });
